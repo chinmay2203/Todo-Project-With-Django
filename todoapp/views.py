@@ -5,8 +5,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Task
 
-# Create your views here.
-
 @login_required
 def home(request):
         tasks = Task.objects.filter(user=request.user)
